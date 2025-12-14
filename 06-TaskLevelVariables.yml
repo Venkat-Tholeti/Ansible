@@ -1,0 +1,17 @@
+---
+ 
+ - name: VARIABLES IN TASKLEVEL
+   hosts: local
+   connection: local
+   vars:
+    PERSON: Nani
+    AGE: 32
+    WORK: WellsFargo
+   
+   tasks:
+     - name: TASKLEVEL VARIABLES
+       vars:
+         AGE: 26
+         WORK: Vitech
+       debug:
+         msg: "Hi This is {{ PERSON }}, age is {{ AGE }} & Works at {{ WORK }}" 
