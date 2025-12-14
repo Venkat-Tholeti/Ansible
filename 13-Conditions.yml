@@ -4,7 +4,7 @@
   hosts: local
   connection: local
   vars:
-    NUMBER: 78
+    NUMBER: 101
   tasks:
      - name: Print if the number is less than or equal to 100
        debug:
