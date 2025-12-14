@@ -23,7 +23,7 @@
      - name: SIGNUP QUERY ### PROMPT + CONDITIONS
        debug:
          msg: "ENTER USERNAME & PASSWORD"
-         when: signup == "YES"
+       when: signup == "YES"
 
      - name: Print INFORMATION
        debug:
