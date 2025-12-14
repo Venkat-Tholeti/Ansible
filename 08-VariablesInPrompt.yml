@@ -1,0 +1,21 @@
+---
+
+# PROMPT IS SAME AS READ COMMAND IN SHELL FOR USER INTERVENTION OR USER INPUT
+
+- name: PROMPT IN ANSIBLE
+  hosts: local
+  connection: local
+  vars_prompt:
+     - name: username #variable
+       prompt: Please enter your LoginName 
+       private: no
+
+     - name: password
+       prompt: Please enter your LoginPassword
+       private: yes
+
+  tasks:
+     - name : Print INFORMATION
+       debug:
+        msg: "HI, USERNAME ENTERED IS {{ username }}, PASSWORD ENTERED IS {{ password }}"
+    
