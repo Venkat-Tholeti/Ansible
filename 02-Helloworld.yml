@@ -1,0 +1,8 @@
+---
+- name: Hello World
+  hosts: local
+  connection: local #no need of username & password for local server
+  tasks:
+   - name: Hello World
+     debug:
+      msg: "Hello World"
