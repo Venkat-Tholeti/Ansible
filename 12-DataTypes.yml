@@ -1,0 +1,21 @@
+---
+
+- name: Ansible Data Types
+  host: local
+  connection: local
+  vars: 
+    DURATION: 120 # THIS IS NUMBER
+    COURSE: "DEVSECOPS" # THIS IS STRING (text)
+    IS_LIVE: true # BOOLEAN (YES/NO, TRUE/FALSE, ON/OFF)
+    TOOLS: # This is LIST (ARRAY) which starts with - is list can access like []
+      - Linux
+      - Ansible
+      - AWS
+    CONCEPTS: # THis is called MAP or DICTIONARY or OBJECT , IT IS LIKE KEY VALUE PAIR 
+      CI: Jenkins
+      SCRIPTING : "Shell, Ansible, Terraform"
+      # We can access this like {{ CONCEPTS.CI }} {{ CONCEPTS.SCRIPTING }}
+  tasks:
+    - name: Print Course Information
+      debug:
+       msg: "course is {{ COURSE }} is {{ DURATION }} and is live?: {{ IS_LIVE }}, Tools are {{ TOOLS }}, Concepts are {{ CONCEPTS }}"
