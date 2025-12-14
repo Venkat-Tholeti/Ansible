@@ -15,3 +15,8 @@
          WORK: Vitech
        debug:
          msg: "Hi This is {{ PERSON }}, age is {{ AGE }} & Works at {{ WORK }}" 
+
+   tasks:
+     - name: TASKLEVEL VARIABLES
+       debug:
+         msg: "Hi This is {{ PERSON }}, age is {{ AGE }} & Works at {{ WORK }}" 
