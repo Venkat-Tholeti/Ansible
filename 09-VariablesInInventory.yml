@@ -1,0 +1,9 @@
+---
+- name: VARIABLES FROM INVENTORY
+  hosts: local
+  connection: local
+  tasks:
+   - name: PRINT COURSE INFO
+     debug: 
+       msg: "{{ COURSE }} IS TEACHED BY {{ TRAINER }} FOR {{ DURATION }}"
+       
