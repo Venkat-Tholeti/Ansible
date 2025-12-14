@@ -1,0 +1,12 @@
+---
+
+ - name: VARIABLES FROM FILE
+   hosts: local
+   connection: local
+   vars_files:
+       - VariablesFromFile.yml
+
+   tasks:
+     - name: NANI WORK INFORMATION
+       debug:
+        msg: " NANI WORKS AT {{ WORK }} IN {{ TEAM }} TEAM.HIS MANAGER IS {{ MANAGER }}"
