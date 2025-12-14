@@ -10,7 +10,7 @@
   tasks:
       - name: PRINT COURSE & TUTOR INFORMATION
         debug: 
-          msg: " $COURSE IS TEACHED BY $TRAINER "
+          msg: " {{ COURSE }} IS TEACHED BY {{ TRAINER }} "
 
       - name: PRINT ANSIBLE HOURS INFORMATION
         debug:
