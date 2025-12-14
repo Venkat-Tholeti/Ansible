@@ -8,7 +8,7 @@
   vars_prompt:
     ### PROMPT + CONDITIONS
      - name: signup
-       prompt: "DO YOU WANT TO SIGNUP? (YES/NO)"
+       prompt: "DO YOU WANT TO SIGNUP? (yes/no)"
 
 
      - name: username #variable
@@ -23,7 +23,7 @@
      - name: SIGNUP QUERY ### PROMPT + CONDITIONS
        debug:
          msg: "ENTER USERNAME & PASSWORD"
-       when: signup == "YES"
+       when: signup == "yes"
 
      - name: Print INFORMATION
        debug:
