@@ -9,4 +9,4 @@
    tasks:
      - name: NANI WORK INFORMATION
        debug:
-        msg: " NANI WORKS AT {{ WORK }} IN {{ TEAM }} TEAM.HIS MANAGER IS {{ MANAGER }}"
+        msg: "NANI WORKS AT {{ WORK }} IN {{ TEAM }} TEAM.HIS MANAGER IS {{ MANAGER }}"
