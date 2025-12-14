@@ -1,7 +1,7 @@
 ---
 
 - name: Ansible Data Types
-  host: local
+  hosts: local
   connection: local
   vars: 
     DURATION: 120 # THIS IS NUMBER
