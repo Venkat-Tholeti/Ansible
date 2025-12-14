@@ -6,6 +6,11 @@
   hosts: local
   connection: local
   vars_prompt:
+    ### PROMPT + CONDITIONS
+     - name: signup
+       prompt: "DO YOU WANT TO SIGNUP? (YES/NO)"
+
+
      - name: username #variable
        prompt: Please enter your LoginName 
        private: no
@@ -13,10 +18,6 @@
      - name: password
        prompt: Please enter your LoginPassword
        private: yes
-      
-      ### PROMPT + CONDITIONS
-     - name: signup
-       prompt: "DO YOU WANT TO SIGNUP? (YES/NO)"
 
   tasks:
      - name: SIGNUP QUERY ### PROMPT + CONDITIONS
