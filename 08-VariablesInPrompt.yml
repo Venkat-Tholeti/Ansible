@@ -10,7 +10,6 @@
      - name: signup
        prompt: "DO YOU WANT TO SIGNUP? (yes/no)"
 
-
      - name: username #variable
        prompt: Please enter your LoginName 
        private: no
@@ -20,9 +19,9 @@
        private: yes
 
   tasks:
-     - name: SIGNUP QUERY ### PROMPT + CONDITIONS
+     - name: SIGNUP QUERY 
        debug:
-         msg: "ENTER USERNAME & PASSWORD"
+         msg: "USERNAME ENTERED IS {{ username }}, PASSWORD ENTERED IS {{ password }}"
        when: signup == "yes"
 
      - name: Print INFORMATION
