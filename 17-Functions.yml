@@ -7,3 +7,17 @@
      - name: Check undefined variables
        debug:
          msg: "Hello, {{ person | default('Nani') }}"  # IF the variable is not defined , we need to tell that function to take default by passing the variable in default
+
+ - name: Functions
+   hosts: local
+   connection: local
+   vars:
+     person: "Ramesh,Suresh,Raheem,Joseph"
+   tasks:
+     - name: Check undefined variables
+       debug:
+         msg: "Hello, {{ person | default('Nani') }}"  
+
+     - name: Print names
+       debug:
+         msg: "Hello, {{ person | split(',') }}"  
