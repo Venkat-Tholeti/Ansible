@@ -6,6 +6,10 @@
    become: yes
    tasks:
      - name: Redirect ls output to a file 
-       #command: " ls -ltr > /tmp/ouput.txt" # It will throw error
-       shell: " ls -ltr > /tmp/ouput.txt" # It will not throw error if it is shell
-       
+       #command: "ls -ltr > /tmp/ouput.txt" # It will throw error
+       shell: "ls -ltr > /tmp/ouput.txt" # It will not throw error if it is shell
+       register: command_output # it will store the output of the command we ran above , just like $() in shell scripting.
+
+     - name: Print the output
+       debug:
+          msg: "{{ command_output }}"
