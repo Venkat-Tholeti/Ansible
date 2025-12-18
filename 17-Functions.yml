@@ -40,3 +40,10 @@
        debug:
           msg: "course information: {{ course | items2dict }}"
 
+     - name: Convert to Uppercase
+       vars:
+         name: nani,Venkat,BOBBY
+       debug:
+         msg: "Hello, {{ name | upper }}"
+         
+
