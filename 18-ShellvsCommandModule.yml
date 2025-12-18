@@ -4,6 +4,6 @@
  - name: Shell (linux) vs Command (command module in ansible)
    hosts: frontend
    become: yes
-   taks:
+   tasks:
      - name : Redirect ls output to a file 
        command: " ls -ltr > /tmp/ouput.txt"
