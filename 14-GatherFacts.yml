@@ -6,4 +6,4 @@
   tasks:
    - name: Print Facts
      debug:
-      msg: "{{ ansible_facts }}
+      msg: "{{ ansible_facts }}"
