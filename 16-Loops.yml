@@ -1,0 +1,14 @@
+---
+
+- name: Loops
+  hosts: local
+  connection: local
+  tasks:
+    - name: Print names
+      debug: 
+       msg: "Hi ra {{ item }}" # item here is reserved key word
+      loop:
+      - Suresh
+      - Ramesh
+      - Joseph
+      - Raheem
