@@ -20,4 +20,14 @@
 
      - name: Print names
        debug:
-         msg: "Hello, {{ person | split(',') }}"  
+         msg: "Hello, {{ person | split(',') }}" 
+
+     - name: Convert map into list
+       vars:
+        course:
+          name: Devops
+          hours: 120Hours
+          trainer: Sivakumar
+       debug:
+          msg: "course information: {{ course | dict2items }}"
+
