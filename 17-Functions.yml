@@ -18,4 +18,6 @@
        debug:
          msg: "Hello, {{ person | default('Nani') }}"  
 
-     
+     - name: Print names
+       debug:
+         msg: "Hello, {{ person.split(',') }}"  
