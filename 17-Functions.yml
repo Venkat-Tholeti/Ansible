@@ -56,6 +56,6 @@
        vars:
         ip: "300.155.213.432"
        debug:
-         msg: "IS {{ ip | ipaddr }}"
+         msg: "IPADDRESS IS {{ ip | ipaddr }}"
          
 
