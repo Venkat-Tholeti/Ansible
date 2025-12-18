@@ -13,3 +13,11 @@
      - name: Print the output
        debug:
           msg: "{{ command_output }}"
+
+     - name: Redirect ls output to a file using COMMAND
+       command: "ls -ltr"
+       register: command_result # register will store the output of the command we ran above , just like $() in shell scripting.
+     
+     - name: Print the output
+       debug:
+          msg: "{{ command_result }}"
