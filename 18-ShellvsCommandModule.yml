@@ -1,0 +1,9 @@
+---
+
+#COMMAND/COMMANDS will not be processed through the shell, so opertaions like "*","<",">","|",";" and "&" will not work
+ - name: Shell (linux) vs Command (command module in ansible)
+   hosts: frontend
+   become: yes
+   taks:
+     - name : Redirect ls output to a file 
+       command: " ls -ltr > /tmp/ouput.txt"
