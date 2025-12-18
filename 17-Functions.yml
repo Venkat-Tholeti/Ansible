@@ -55,10 +55,14 @@
      - name: IP Address Validation
        vars:
         ip: "300.155.213.432" 
-        ip: "172.26.43.18"
        debug:
          msg: "IPADDRESS IS {{ ip | ipaddr }}"
 
+     - name: IP Address Validation
+       vars:
+        ip: "172.26.43.18" 
+       debug:
+         msg: "IPADDRESS IS {{ ip | ipaddr }}"
      
 
      
