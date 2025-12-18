@@ -51,5 +51,11 @@
          name: nani,Venkat,BOBBY
        debug:
          msg: "Hello, {{ name | lower }}"
+
+     - name: IP Address Validation
+       vars:
+        ip: "300.155.213.432"
+       debug:
+         msg: "IS {{ ip | ipaddr }}"
          
 
