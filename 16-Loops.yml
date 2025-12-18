@@ -13,15 +13,15 @@
       - Joseph
       - Raheem
 
+- name: Install Packages
+  hosts: frontend
+  become: yes
+  tasks:
     - name: Install Packages
-      hosts: frontend
-      become: yes
-      tasks:
-        - name: Install Packages
-          package:
-           name: "{{ item }}"
-           state: installed
-          loop:
-           - mysql
-           - zip
-           - http
+      package:
+       name: "{{ item }}"
+       state: installed
+      loop:
+         - mysql
+         - zip
+         - http
