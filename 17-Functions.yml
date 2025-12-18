@@ -20,4 +20,4 @@
 
      - name: Print names
        debug:
-         msg: "Hello, {{ person.split(',') }}"  
+         msg: "Hello, {{ person | split(',') }}"  
