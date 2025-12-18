@@ -1,0 +1,9 @@
+---
+
+ - name: Functions
+   hosts: local
+   connection: local
+   tasks:
+     - name: Check undefined variables
+       debug:
+         msg: "Hello, {{ person | default('Nani') }}"  # IF the variable is not defined , we need to tell that function to take default by passing the variable in default
