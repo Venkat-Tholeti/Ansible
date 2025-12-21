@@ -1,0 +1,17 @@
+---
+
+- name: install nginx
+  hosts: dynamic_frontend # REFERING TO DYNAMIC INVENTORY
+  become: yes
+  serial: 5 # SERIAL = Instead of running tasks in parallel across all hosts, serial divides hosts into batches, executing tasks on one batch before moving to the next.HERE 5 servers will be done in one batch.Serial defines the number of hosts to run in each batch during play execution.
+  tasks:
+  - name: install nginx
+    package:
+      name: nginx
+      state: installed
+
+  - name: run nginx
+    service:
+      name: nginx
+      state: started
+      enabled: yes
