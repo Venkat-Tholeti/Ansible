@@ -1,7 +1,0 @@
----
- - name: VARIABLES FROM INVENTORY
-   hosts: frontend
-   tasks:
-    - name: PRINT COURSE INFO
-      debug: 
-        msg: "{{ COURSE }} IS TEACHED BY {{ TRAINER }} FOR {{ DURATION }}"

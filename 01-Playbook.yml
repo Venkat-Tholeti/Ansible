@@ -1,6 +1,7 @@
 ---
-- name: Ping the server
-  hosts: frontend
-  tasks: #LIST OF TASKS TO BE OPERATED
-    - name: Ping the server
-      ping:
+  
+  - name: Ping the server
+    hosts: frontend
+    tasks: #list of tasks
+      - name: Ping the server
+        ping: 
