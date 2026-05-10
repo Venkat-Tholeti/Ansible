@@ -23,3 +23,18 @@
         - Suresh
         - Ramesh
         - Nani
+
+  # to install and remove some packages
+
+ - name: Loops
+   hosts: frontend
+   become: yes
+   tasks:
+     - name: Loops concept 
+       package:
+         name: "{{ item.name }}"
+         state: "{{ item.state }}"
+       loop:
+        - { name: 'nginx', state: 'present' }
+        - { name: 'mysql', state: 'absent' }
+        - { name: 'zip', state: 'absent' }
