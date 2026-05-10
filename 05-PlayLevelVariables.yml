@@ -1,0 +1,13 @@
+---
+
+  - name: Play level variables
+    hosts: local
+    connection: local
+    vars: #either upper case or lower case anything we can user
+       COURSE: DevOps
+       USER: Nani
+       HOURS: 4
+    tasks:
+      - name: Print the course info
+        debug:
+           msg: "Hello This Course is {{ COURSE }} will be studied by {{ USER }} daily for {{ HOURS }} Hours"
