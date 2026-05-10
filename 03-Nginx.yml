@@ -1,7 +1,7 @@
 ---
   - name: Nginx Installation
     hosts: local
-    conenction: local
+    connection: local
     tasks:
       - name: Install Nginx
         package:
