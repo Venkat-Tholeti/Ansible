@@ -2,6 +2,7 @@
 
 - name: shell vs command
   hosts: frontend
+  become: yes
   tasks:
   - name: redirect ls output to a file
     shell: 
