@@ -1,6 +1,6 @@
 ---
 
-  - name: Play level variables
+  - name: Task level variables
     hosts: local
     connection: local
     vars: #either upper case or lower case anything we can user

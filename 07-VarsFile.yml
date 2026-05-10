@@ -1,5 +1,5 @@
 ---
-  - name: Print personal info using variables file
+  - name: Variables From File
     hosts: local
     connection: local
     vars_files:
