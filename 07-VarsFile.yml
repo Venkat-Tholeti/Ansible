@@ -1,0 +1,10 @@
+---
+  - name: Print personal info using variables file
+    hosts: local
+    connection: local
+    vars_file:
+      - vars.yml
+    tasks:
+      - name: print info
+        debug:
+          msg: "Hello, My name is {{ Name }}, i am working as {{ Work }} and has {{ Experience }} experience"
