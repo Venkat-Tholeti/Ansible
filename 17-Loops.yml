@@ -7,12 +7,10 @@
         package:
            name: "{{ item }}"
            state: present
-        debug:
-           msg: "{{ item}} installed successfully"
-        when: state = present
         loop:
          - nginx
          - httpd
+         - mysql
 
  - name: Loops
    hosts: local
