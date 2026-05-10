@@ -5,7 +5,7 @@
   hosts: local
   connection: local
   vars:
-      number: 10
+      number: $1
   tasks:
       - name: Print message
         debug:
