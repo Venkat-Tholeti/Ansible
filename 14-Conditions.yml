@@ -10,4 +10,12 @@
       - name: Print message
         debug:
           msg: "Number is greater than 5"
-        when: number | int > 5
+        when: number  > 5
+
+  # If we want to pass number from argument then here in when condition u should write as below
+      # when: number | int > 5 # "Convert number to integer and run the task only if it is greater than 5"
+
+    #bcoz when we pass argument from outside error ocuurs because "4" (string) & 5 (integer) so it cannot compare string vs int it treat as string so we need to write it 
+        # ansible-playbook -i Inventory.ini 14-Conditions.yml -e "number=4"
+
+   
