@@ -5,5 +5,5 @@
    become: yes
    tasks:
       - name: redirect ls output to a file
-        command:
+        shell:
             "ls -ltr > /tmp/output.txt"
