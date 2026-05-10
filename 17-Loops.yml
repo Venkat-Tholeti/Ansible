@@ -1,0 +1,25 @@
+---
+ - name: Loops
+   hosts: local
+   connection: local
+   become: yes
+   tasks:
+      - name: Using loop concept package install
+        package:
+           name: "{{ item }}"
+           state: present
+        loop:
+         - wget
+         - curl
+
+ - name: Loops
+   hosts: local
+   connection: local
+   tasks:
+     - name: Loops concept testing with names
+       debug:
+         msg: "Hello {{ item }}"
+       loop:
+        - Suresh
+        - Ramesh
+        - Nani
