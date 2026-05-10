@@ -1,16 +1,18 @@
 ---
  - name: Loops
-   hosts: local
-   connection: local
+   hosts: frontend
    become: yes
    tasks:
       - name: Using loop concept package install
         package:
            name: "{{ item }}"
            state: present
+        debug:
+           msg: "{{ item}} installed successfully"
+        when: state = present
         loop:
-         - wget
-         - curl
+         - nginx
+         - httpd
 
  - name: Loops
    hosts: local
