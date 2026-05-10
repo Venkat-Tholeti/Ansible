@@ -1,0 +1,8 @@
+---
+
+ - name: Variables from inventory - Nodes
+   hosts: frontend
+   tasks:
+     - name: Print course info
+       debug:
+         msg: "Hello, My name is {{ Name }}, i am working as {{ Work }} and has {{ Experience }} experience"

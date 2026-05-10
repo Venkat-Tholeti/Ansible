@@ -1,6 +1,6 @@
 ---
 
- - name: Variables from inventory
+ - name: Variables from inventory - Node Group
    hosts: local
    connection: local
    tasks:
