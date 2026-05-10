@@ -1,0 +1,9 @@
+---
+
+ - name: Shell VS Comamnd
+   hosts: frontend
+   become: yes
+   tasks:
+      - name: redirect ls output to a file
+        command:
+            "ls -ltr > /tmp/output.txt"
