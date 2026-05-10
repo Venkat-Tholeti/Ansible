@@ -7,3 +7,4 @@
       - name: redirect ls output to a file
         shell:
             "ls -ltr > /tmp/output.txt"
+        register: command_result
