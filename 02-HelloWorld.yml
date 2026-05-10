@@ -1,0 +1,10 @@
+---
+  
+   - name: Hello World
+     hosts: local
+     connection: local # no need of username and password for local host 
+     tasks:
+       - name: Print hello World
+         debug:
+           msg: "Hello World"
+         
