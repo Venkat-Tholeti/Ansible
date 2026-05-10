@@ -10,4 +10,4 @@
       - name: Print message
         debug:
           msg: "Number is greater than 5"
-        when: number > 5
+        when: number | int > 5
