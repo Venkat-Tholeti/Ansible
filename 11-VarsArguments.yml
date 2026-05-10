@@ -1,0 +1,8 @@
+---
+   - name: Variables From Arguments
+     hosts: local
+     connection: local
+     tasks:
+       - name: Print info
+         debug:
+            msg: "Hello, My name is {{ Name }}, i am working as {{ Work }} and has {{ Experience }} experience"
