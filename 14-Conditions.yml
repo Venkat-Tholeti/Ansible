@@ -2,8 +2,8 @@
 
 
 - name : Conditions demo
-  hosts: localhost
-  connection: localhost
+  hosts: local
+  connection: local
   vars:
       number: 10
   tasks:
